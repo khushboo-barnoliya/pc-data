@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+  font-family: 'Poppins';
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.box{
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+
+.outerBox{
+  height: 400px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  background-color: #cff1ff;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+
+.innerBox{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  border: 2px dashed #535AFF;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border-radius: 10px;
+  gap: 10px;
+  text-align: center;
+}
+
+.innerBox > img{
+  margin-bottom: 30px;
+}
+
+.innerBox button{
+  width: 5rem;
+  height: 2.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 5px;
+  background: linear-gradient(to right, #05B9FF, #535AFF);
+  position: relative;
+}
+
+
+.innerBox button input{
+  opacity: 0;
+  padding: 10px 0;
+  z-index: 5;
+  cursor: pointer;
+}
+
+.innerBox button img{
+  position: absolute;
+  top: 9px;
+  left: 30px;
+  animation: up 1s ease-in-out infinite;
+}
+
+@keyframes up{
+  0%, 100%{
+    transform: translateY(0px);
+  }
+  50%{
+    transform: translateY(-4px);
+  }
+}

@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+*{
+  font-family: 'Quicksand';
+}
+
+
+#main {
+  height: 100vh;
+  width: 100vw;
+  background: #660b1a;
+  background: -webkit-linear-gradient(to right, #240b36, #660b1a);
+  background: linear-gradient(to right, #240b36, #660b1a);
+}
+
+#todo{
+  max-width: 30rem;
+}
+
+.addBtn{
+  background: linear-gradient(to left, #240b36, #660b1a);
+  color: white;
+}
+.addBtn:hover{
+  color: white;
+}
+.addBtn:active{
+  background: linear-gradient(to right, #240b36, #660b1a);
+  color: white !important;
+}
+
+#delBtn i{
+  color: #660b1a;
+}
+
+.label {
+  width: 1.5rem;
+  cursor: pointer;
+}
+
+.label input {
+  display: none;
+}
+
+.label svg {
+  overflow: visible;
+}
+
+.path {
+  fill: none;
+  stroke: #240b36;
+  stroke-width: 6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: stroke-dasharray 0.5s ease, stroke-dashoffset 0.5s ease;
+  stroke-dasharray: 238 9999999;
+  stroke-dashoffset: 0;
+}
+
+#listSpan.checked{
+  text-decoration: line-through !important;
+}
+.label input:checked ~ svg .path {
+  stroke-dasharray: 65.5096664428711 9999999;
+  stroke-dashoffset: -262.2723388671875;
+  stroke: #660b1a;
+}
+
+#delBtn:active{
+  background-color: #E9ECEF !important;
+  border-color: transparent;
+}
+
+#taskInput:focus-visible{
+  outline: transparent;
+}

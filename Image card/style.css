@@ -1,0 +1,17 @@
+.main-container {
+    overflow: hidden;
+  }
+  
+  .main-container,
+  .main-container * {
+    box-sizing: border-box;
+  }
+  
+  .main-container {
+    position: relative;
+    width: 1320px;
+    height: 720px;
+    margin: 0 auto;
+    background: #ffffff;
+  }
+  

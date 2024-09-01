@@ -1,0 +1,23 @@
+*{
+  font-family: 'Cairo';
+}
+body{
+  background-color: black;
+}
+
+.main{
+  padding: 30px 30px 30px !important;
+  width: 22rem;
+  height: 95vh !important;
+  min-height: 95vh !important;
+  background-color: white;
+}
+button{
+  width: 4rem !important;
+  height: 4rem !important;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.411);
+}
+
+button:active{
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.411) inset;
+}

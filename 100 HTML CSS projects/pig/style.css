@@ -1,0 +1,128 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main{
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+
+.frame{
+  height: 400px;
+  width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.pig{
+  height: 80%;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+  z-index: 0;
+  
+}
+
+.head{
+  height: 100%;
+  width: 100%;
+  background-color: #F7949A;
+  border-radius: 100%;
+  position: relative;
+}
+
+
+.ear{
+  height: 100px;
+  width: 100px;
+  background-color: #FFB7BC;
+  border: 15px solid #F7949A;
+  z-index: -1;
+  position: absolute;
+}
+
+.leftEar{
+  left: 0.5rem;
+  top: -5px;
+  border-radius: 25px 0 0 0;
+  transform: rotate(-15deg) skewY(27deg);
+}
+.rightEar{
+  right: 0.5rem;
+  top: -5px;
+  border-radius: 0 25px 0 0;
+  transform: rotate(15deg) skewY(-27deg);
+}
+
+.eye{
+  background-color: white;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  position: absolute;
+  top: 35%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: roll 15s ease-in-out infinite;
+}
+
+.eyeSpan{
+  height: 8px;
+  width: 8px;
+  background-color: black;
+  z-index: 5;
+  border-radius: 50%;
+  animation: roll 15s ease-in-out infinite;
+}
+
+
+@keyframes roll{
+  0%, 23%, 25%, 65%, 67%, 89%, 91%, 100%  {
+		transform: scaleY(1);
+	}
+	24%, 66%, 90% {
+		transform: scaleY(0);
+	}
+}
+.leftEye{
+  left: 55px;
+}
+.rightEye{
+  right: 55px;
+}
+.nosLeft{
+  left: 0;
+}
+.nosLeft{
+  right: 0;
+}
+
+.nose{
+  background-color: #FFB7BC;
+  border-radius: 50%;
+  width: 120px;
+  top: 50%;
+  left: 28%;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  padding: 22px 28px 50px;
+}
+
+.nostril{
+  background-color: #CE666D;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+}

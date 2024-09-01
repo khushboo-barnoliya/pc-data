@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+}
+
+.container{
+    min-height: 100vh;
+    width: 100%;
+    /* background: linear-gradient(to right, #1a7e54, #0f3443); */
+    background-color: black;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todoBox{
+    width: 100%;
+    max-width: 540px;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: rgba(0, 0, 0, 0.404) 3px 5px 8px;
+}
+
+.todoBox h2{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    color: black;
+    gap: 15px;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 30px;
+    background-color: #edeef0;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+.row input{
+    /* flex: 1; */
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 15px;
+    font-weight: 500;
+    width: 100%;
+}
+
+.row button{
+    background: linear-gradient(to right, #db1b74, #62012d);
+    border: none;
+    color: white;
+    padding: 15px 50px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+#listContainer li{
+    list-style: none;
+    font-size: 16px;
+    padding: 10px 8px 10px 50px;
+    font-weight: 500;
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: black;
+    cursor: pointer;
+}
+
+#listContainer li::before{
+    content: "";
+    position: absolute;
+    height: 22px;
+    width: 22px;
+    border-radius: 50%;
+    background-image: url(img/uncheck.png);
+    background-position: center;
+    background-size: cover;
+    left: 8px;
+}
+
+#listContainer li.checked{
+    color: #333;
+    font-weight: 400;
+    text-decoration: line-through;
+}
+#listContainer li.checked::before{
+    background-image: url(img/check.png);
+
+}
+
+#listContainer li span{
+    position: absolute;
+    right: 0;
+    top: 10px;
+    width: 30px;
+    height: 30px;
+    font-size: 25px;
+    color: #b10050;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#listContainer li span:hover{
+    background-color: #adadad49;
+    border-radius: 30px;
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <link rel="shortcut icon" href="/images/fav.png" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
+    rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            mulish: ['Mulish'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    * {
+      font-family: "Mulish";
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <main>
+    <div class="w-full h-[100vh] bg-[#202020] flex justify-center items-center">
+      <div
+        class="bg-gradient-to-br from-[#f75565] to-[#89216B] rounded-lg p-6 px-8 justify-center flex flex-col items-center gap-5">
+        <div class="flex justify-between items-center gap-2 flex-col">
+
+          <div class="flex justify-center items-center gap-3">
+            <input type="text" placeholder="Enter your City"
+              class="bg-white/80 rounded-full p-2 px-5 focus-visible:outline-none input capitalize">
+
+            <button class="bg-white/80 rounded-full p-3 button active:bg-white/50 active:scale-[0.98]">
+              <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
+                width="16" height="16" x="0" y="0" viewBox="0 0 6.35 6.35" style="enable-background:new 0 0 512 512"
+                xml:space="preserve">
+                <g
+                  transform="matrix(1.1700000000000002,0,0,1.1700000000000002,-0.5379181456565867,-0.5375339913368231)">
+                  <path
+                    d="M2.894.511a2.384 2.384 0 0 0-2.38 2.38 2.386 2.386 0 0 0 2.38 2.384c.56 0 1.076-.197 1.484-.523l.991.991a.265.265 0 0 0 .375-.374l-.991-.992a2.37 2.37 0 0 0 .523-1.485C5.276 1.58 4.206.51 2.894.51zm0 .53c1.026 0 1.852.825 1.852 1.85S3.92 4.746 2.894 4.746s-1.851-.827-1.851-1.853.825-1.852 1.851-1.852z"
+                    paint-order="stroke fill markers" fill="#000000" opacity="1" data-original="#000000"></path>
+                </g>
+              </svg>
+            </button>
+          </div>
+
+          <div class="error hidden">
+            <p class="text-white text-[12px] font-light">Invalid city name</p>
+          </div>
+
+        </div>
+
+        <div id="weather" class="hidden">
+          <div class="flex justify-center items-center flex-col gap-5">
+            <div class="weatherImg">
+              <img src="images/rain.png" width="130" class="weatherIcon">
+            </div>
+
+            <div class="text-center">
+              <h1 class=" text-5xl font-bold text-white temp mb-4">22°C</h1>
+              <h2 class="text-2xl font-semibold city text-white/80">New York</h2>
+            </div>
+
+            <div class="grid grid-cols-2 gap-3 text-center  text-white">
+
+              <div class="flex gap-3 items-center">
+                <img src="/images/humidity.png" width="45">
+                <div class="text-start text-[12px] leading-tight">
+                  <p class="text-[18px] humid">50%</p>
+                  <p>Humidity</p>
+                </div>
+              </div>
+
+              <div class="flex gap-3 items-center">
+                <img src="/images/wind.png" width="45">
+                <div class="text-start text-[12px] leading-tight">
+                  <p class="text-[18px] wind">15 km/h</p>
+                  <p>Wind Speed</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+  <script src="script.js"></script>
+</body>
+
+</html>

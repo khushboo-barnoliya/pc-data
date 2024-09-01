@@ -1,0 +1,13 @@
+.nav-link{
+    color: rgb(236,95,100) !important;
+    font-family: roboto !important;
+}
+
+#card1{
+    background-color: rgba(0, 0, 0, 0.513) !important;
+}
+
+
+#snbtn{
+    background-color: rgb(236,97,100);
+}

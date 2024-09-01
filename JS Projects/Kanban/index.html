@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kanaban Board</title>
+
+  <!-- google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dongle&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+
+  <!-- tailwind css -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    *{
+      font-family: "Montserrat";
+    }
+
+    .kanBanColumn:not(:last-child){
+      margin-right: 30px;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div class="mainKanban w-full p-6">
+
+    <h1 class="uppercase font-bold text-center text-3xl mb-6">Kanban Board</h1>
+
+    <div class="kanBanWrapper bg-[#034078] text-white rounded-[10px] p-5">
+
+      <div class="kanBanColumn flex-1">
+        <div class="kanBanTitle mb-5 select-none text-white text-2xl">
+          <h3>Not Started</h3>
+        </div>
+  
+        <div class="kanBanItems">
+          <div class="itemInput bg-white py-[10px] px-[20px] rounded-md cursor-pointer">Wash the dishes</div>
+          <div class="dropZone"></div>
+        </div>
+  
+        <button class="kanBanAddItems">+ Add</button>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+
+</html>
